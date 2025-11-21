@@ -57,7 +57,7 @@ export default function Gallery({
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="w-full"
       >
-        <div className="relative w-full h-[600px]">
+        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] gap-x-2 gap-y-2">
           <Image
             src={src}
             alt={`Photo ${i + 1}`}
@@ -72,21 +72,21 @@ export default function Gallery({
   };
 
   return (
-    <section className="card w-full border border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)]">
+    <section className="card w-full border border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)] space-y-2">
       {coopImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-1 gap-y-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
+        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
           {coopImages.map((src, i) => renderImage(src, i))}
         </div>
       )}
 
       {vetteImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-1 gap-y-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
+        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
           {vetteImages.map((src, i) => renderImage(src, i))}
         </div>
       )}
 
       {myselfImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-1 gap-y-1 sm:grid-cols-2 md:grid-cols-3 mb-4">
+        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
           {myselfImages.map((src, i) => renderImage(src, i))}
         </div>
       )}
