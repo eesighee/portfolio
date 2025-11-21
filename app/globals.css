@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f3f4f6;
+  --foreground: #171717;
+  --card-bg: #f0f2f4;
+  --card-foreground: #111827;
+  /* stronger dot so the texture is visible */
+  --dot: rgba(0,0,0,0.06);
+  
+  /* Dark theme colors from hero layout */
+  --primary-dark: #1A1A1A;
+  --secondary-dark: #2C2C2C;
+  --text-light: #F5F5F5;
+  --accent: #E5E7EB; /* Neutral Light Gray */
+  --callout: #B8860B;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f1720;
+    --foreground: #e6eef8;
+    --dot: rgba(255,255,255,0.04);
+    --card-bg: #111827;
+    --card-foreground: #e6eef8;
+  }
+}
+
+/* Ensure card content uses the card foreground color for strong contrast */
+.card, .card * {
+  color: var(--card-foreground) !important;
+}
+
+body {
+  /* Gradient background with subtle texture overlay */
+  background: 
+    radial-gradient(circle, var(--dot) 1.5px, transparent 1.5px),
+    linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 50%, #1A1A1A 100%);
+  background-size: 10px 10px, 100% 100%;
+  background-repeat: repeat, no-repeat;
+  background-position: 0 0, center;
+  background-attachment: scroll, fixed;
+  color: var(--foreground);
+
+}
