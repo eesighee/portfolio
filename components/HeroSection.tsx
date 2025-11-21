@@ -27,7 +27,7 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Text Content & Overlay */}
-      <div className="absolute inset-0 bg-primary-dark/40 flex flex-col justify-end p-8 md:p-16 lg:p-24">
+      <div className="absolute inset-0 bg-primary-dark/40 flex flex-col justify-end pb-4 pt-4 md:p-16 lg:p-24">
         <motion.h1 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
