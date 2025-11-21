@@ -1,132 +1,120 @@
 {
-  "austin_storm.jpg": {
-    "original": "/photos/austin_storm.jpg",
-    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHhAAAgEDBQAAAAAAAAAAAAAAAAECAwQRFCEiMaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIRAxEAPwANXRUeEZNhu7368MbZMhMknbf/2Q==",
-    "variants": {
-      "small": "/photos/austin_storm-small.webp",
-      "medium": "/photos/austin_storm-medium.webp",
-      "large": "/photos/austin_storm-large.webp"
-    },
-    "width": 7008,
-    "height": 4672
-  },
-  "coop-snow-2.jpg": {
-    "original": "/photos/coop-snow-2.jpg",
+  "coop/coop-snow-2.jpg": {
+    "original": "/photos/coop/coop-snow-2.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACAQAAEDAgcAAAAAAAAAAAAAAAEAAyESQQIREzFRU7H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AHQGaajJgEW5VdFzu9SPAHHkZ2WiyD//Z",
     "variants": {
-      "small": "/photos/coop-snow-2-small.webp",
-      "medium": "/photos/coop-snow-2-medium.webp",
-      "large": "/photos/coop-snow-2-large.webp"
+      "small": "/photos/coop/coop-snow-2-small.webp",
+      "medium": "/photos/coop/coop-snow-2-medium.webp",
+      "large": "/photos/coop/coop-snow-2-large.webp",
+      "lightbox": "/photos/coop/coop-snow-2-lightbox.webp"
     },
     "width": 4260,
     "height": 6390
   },
-  "coop.jpg": {
-    "original": "/photos/coop.jpg",
+  "coop/coop.jpg": {
+    "original": "/photos/coop/coop.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAfEAABAwMFAAAAAAAAAAAAAAABAAIRAxITIjRScZL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AB1PpNyEuuJLpMyAguq8z6VTdqOiplJf/9k=",
     "variants": {
-      "small": "/photos/coop-small.webp",
-      "medium": "/photos/coop-medium.webp",
-      "large": "/photos/coop-large.webp"
+      "small": "/photos/coop/coop-small.webp",
+      "medium": "/photos/coop/coop-medium.webp",
+      "large": "/photos/coop/coop-large.webp",
+      "lightbox": "/photos/coop/coop-lightbox.webp"
     },
     "width": 4291,
     "height": 6845
   },
-  "coop_bday.jpg": {
-    "original": "/photos/coop_bday.jpg",
+  "coop/coop_bday.jpg": {
+    "original": "/photos/coop/coop_bday.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBf/EACEQAAIBAgYDAAAAAAAAAAAAAAECAAMRBBIVMTJRYnGS/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAAMBAAAAAAAAAAAAAAAAAAABEVH/2gAMAwEAAhEDEQA/AKU8dVVSWdWNwLEbR9QqePzMxeLeoMx7MF3RVD//2Q==",
     "variants": {
-      "small": "/photos/coop_bday-small.webp",
-      "medium": "/photos/coop_bday-medium.webp",
-      "large": "/photos/coop_bday-large.webp"
+      "small": "/photos/coop/coop_bday-small.webp",
+      "medium": "/photos/coop/coop_bday-medium.webp",
+      "large": "/photos/coop/coop_bday-large.webp",
+      "lightbox": "/photos/coop/coop_bday-lightbox.webp"
     },
     "width": 1365,
     "height": 2048
   },
-  "me.JPG": {
-    "original": "/photos/me.JPG",
-    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAID/8QAHhAAAgICAgMAAAAAAAAAAAAAAQIAEQMhIjESM0H/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ACtnLsAw431LTJj8F5ONdWdQrehT9szUMaGzBT//2Q==",
+  "hero/austin_storm.jpg": {
+    "original": "/photos/hero/austin_storm.jpg",
+    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHhAAAgEDBQAAAAAAAAAAAAAAAAECAwQRFCEiMaH/xAAUAQEAAAAAAAAAAAAAAAAAAAAC/8QAFhEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIRAxEAPwANXRUeEZNhu7368MbZMhMknbf/2Q==",
     "variants": {
-      "small": "/photos/me-small.webp",
-      "medium": "/photos/me-medium.webp",
-      "large": "/photos/me-large.webp"
+      "small": "/photos/hero/austin_storm-small.webp",
+      "medium": "/photos/hero/austin_storm-medium.webp",
+      "large": "/photos/hero/austin_storm-large.webp",
+      "lightbox": "/photos/hero/austin_storm-lightbox.webp"
     },
-    "width": 4240,
-    "height": 2832
+    "width": 7008,
+    "height": 4672
   },
-  "myself-1.png": {
-    "original": "/photos/myself-1.png",
+  "myself/myself-1.png": {
+    "original": "/photos/myself/myself-1.png",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAID/8QAHBABAQADAAMBAAAAAAAAAAAAAQIAAxETITFh/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AFajXWry9VgfWDWOuYN3M0FUDJ8f3IV64H//2Q==",
     "variants": {
-      "small": "/photos/myself-1-small.webp",
-      "medium": "/photos/myself-1-medium.webp",
-      "large": "/photos/myself-1-large.webp"
+      "small": "/photos/myself/myself-1-small.webp",
+      "medium": "/photos/myself/myself-1-medium.webp",
+      "large": "/photos/myself/myself-1-large.webp",
+      "lightbox": "/photos/myself/myself-1-lightbox.webp"
     },
     "width": 4672,
     "height": 7008
   },
-  "myself-2.jpg": {
-    "original": "/photos/myself-2.jpg",
+  "myself/myself-2.jpg": {
+    "original": "/photos/myself/myself-2.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAwEE/8QAHRAAAQQDAQEAAAAAAAAAAAAAAQACAxETIUESUf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAwDAQACEQMRAD8AjJ44bzt2eVaL3Gd5oxfFheSS6zaOz9SFf//Z",
     "variants": {
-      "small": "/photos/myself-2-small.webp",
-      "medium": "/photos/myself-2-medium.webp",
-      "large": "/photos/myself-2-large.webp"
+      "small": "/photos/myself/myself-2-small.webp",
+      "medium": "/photos/myself/myself-2-medium.webp",
+      "large": "/photos/myself/myself-2-large.webp",
+      "lightbox": "/photos/myself/myself-2-lightbox.webp"
     },
     "width": 2160,
     "height": 3840
   },
-  "myself-3.jpg": {
-    "original": "/photos/myself-3.jpg",
-    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAIRAAAgECBgMAAAAAAAAAAAAAAQIAAwQRFCIxMlNhcZH/xAAUAQEAAAAAAAAAAAAAAAAAAAAB/8QAFREBAQAAAAAAAAAAAAAAAAAAABH/2gAMAwEAAhEDEQA/ADXFNEuUpoGOO/mMyNHsP0THJ1NLrxHqBr//2Q==",
-    "variants": {
-      "small": "/photos/myself-3-small.webp",
-      "medium": "/photos/myself-3-medium.webp",
-      "large": "/photos/myself-3-large.webp"
-    },
-    "width": 3739,
-    "height": 6647
-  },
-  "myself-4.jpg": {
-    "original": "/photos/myself-4.jpg",
+  "myself/myself-4.jpg": {
+    "original": "/photos/myself/myself-4.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQIF/8QAHBAAAgICAwAAAAAAAAAAAAAAAAECERIxA8Hx/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AMyUuRRxcqSer6HG/SFpIAP/2Q==",
     "variants": {
-      "small": "/photos/myself-4-small.webp",
-      "medium": "/photos/myself-4-medium.webp",
-      "large": "/photos/myself-4-large.webp"
+      "small": "/photos/myself/myself-4-small.webp",
+      "medium": "/photos/myself/myself-4-medium.webp",
+      "large": "/photos/myself/myself-4-large.webp",
+      "lightbox": "/photos/myself/myself-4-lightbox.webp"
     },
     "width": 4259,
     "height": 6389
   },
-  "vette-2.jpg": {
-    "original": "/photos/vette-2.jpg",
+  "vette/vette-2.jpg": {
+    "original": "/photos/vette/vette-2.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgME/8QAHxAAAQMDBQAAAAAAAAAAAAAAAQACEQMTIQUSFUGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEQMRAD8AtU1MNO0FkjrKPJPObbfSsbmi4TAmUkTMlv/Z",
     "variants": {
-      "small": "/photos/vette-2-small.webp",
-      "medium": "/photos/vette-2-medium.webp",
-      "large": "/photos/vette-2-large.webp"
+      "small": "/photos/vette/vette-2-small.webp",
+      "medium": "/photos/vette/vette-2-medium.webp",
+      "large": "/photos/vette/vette-2-large.webp",
+      "lightbox": "/photos/vette/vette-2-lightbox.webp"
     },
     "width": 1365,
     "height": 2048
   },
-  "vette-5.jpg": {
-    "original": "/photos/vette-5.jpg",
+  "vette/vette-5.jpg": {
+    "original": "/photos/vette/vette-5.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBP/EABsQAAIDAAMAAAAAAAAAAAAAAAERAAIDITFR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAf/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oADAMBAAIRAxEAPwDOdrGtq5sM9JSw12XGlgPHBFga/9k=",
     "variants": {
-      "small": "/photos/vette-5-small.webp",
-      "medium": "/photos/vette-5-medium.webp",
-      "large": "/photos/vette-5-large.webp"
+      "small": "/photos/vette/vette-5-small.webp",
+      "medium": "/photos/vette/vette-5-medium.webp",
+      "large": "/photos/vette/vette-5-large.webp",
+      "lightbox": "/photos/vette/vette-5-lightbox.webp"
     },
     "width": 4672,
     "height": 7008
   },
-  "vette_gas_station.jpg": {
-    "original": "/photos/vette_gas_station.jpg",
+  "vette/vette_gas_station.jpg": {
+    "original": "/photos/vette/vette_gas_station.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAgEAACAgEDBQAAAAAAAAAAAAABAgARIQMEEhMxUXGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AJeWgNVuCqxBxd/IvRvJ23f3L2VRRCi/NQiTZzA//9k=",
     "variants": {
-      "small": "/photos/vette_gas_station-small.webp",
-      "medium": "/photos/vette_gas_station-medium.webp",
-      "large": "/photos/vette_gas_station-large.webp"
+      "small": "/photos/vette/vette_gas_station-small.webp",
+      "medium": "/photos/vette/vette_gas_station-medium.webp",
+      "large": "/photos/vette/vette_gas_station-large.webp",
+      "lightbox": "/photos/vette/vette_gas_station-lightbox.webp"
     },
     "width": 4672,
     "height": 7008

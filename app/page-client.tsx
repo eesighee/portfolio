@@ -5,7 +5,15 @@ import Gallery from "../components/Gallery";
 import HeroSection from "../components/HeroSection";
 import { motion } from "framer-motion";
 
-export default function HomeClient({ images }: { images: string[] }) {
+export default function HomeClient({
+  coopImages,
+  vetteImages,
+  myselfImages,
+}: {
+  coopImages: string[];
+  vetteImages: string[];
+  myselfImages: string[];
+}) {
   const animationProps = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -38,7 +46,7 @@ export default function HomeClient({ images }: { images: string[] }) {
           Snapshots of My Life
         </motion.h2>
 
-        <Gallery images={images} />
+        <Gallery coopImages={coopImages} vetteImages={vetteImages} myselfImages={myselfImages} />
 
         <div id="about" className="mt-24 pt-8 border-t border-[var(--secondary-dark)]">
           <motion.h2
@@ -53,9 +61,9 @@ export default function HomeClient({ images }: { images: string[] }) {
             className="card max-w-3xl mx-auto border-2 border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)]"
           >
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="relative w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-8 border-[var(--accent)]/30">
+              <div className="relative w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-[var(--accent)]/30">
                 <Image
-                  src="/photos/me.JPG"
+                  src="/photos/profile/me.JPG"
                   alt="Isai Alegria"
                   fill
                   style={{ objectFit: "cover", objectPosition: "center 30%" }}

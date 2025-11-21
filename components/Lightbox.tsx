@@ -9,6 +9,7 @@ type ImageMetadata = {
     small: string;
     medium: string;
     large: string;
+    lightbox?: string; // Add optional lightbox variant
   };
   width: number;
   height: number;
@@ -38,6 +39,9 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext, metad
   const fileName = currentImage.split('/').pop() || currentImage;
   const imageMeta = metadata[fileName];
 
+  // Use the high-quality lightbox variant if it exists, otherwise fall back to the original
+  const imageSrc = imageMeta?.variants?.lightbox || currentImage;
+
   return (
     <AnimatePresence>
       <motion.div
@@ -58,7 +62,7 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext, metad
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
             <Image
-              src={currentImage}
+              src={imageSrc}
               alt={`Photo ${index + 1}`}
               fill
               style={{ objectFit: "contain" }}

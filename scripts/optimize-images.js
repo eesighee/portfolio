@@ -17,39 +17,59 @@ const SIZES = {
   small: 400,
   medium: 800,
   large: 1200,
+  lightbox: 2048,
 };
 
 // Supported image extensions (skip .webp to avoid re-processing generated variants)
 const SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.png'];
 
+// Function to recursively get all image files
+function getFilesRecursively(directory) {
+  let files = [];
+  const items = fs.readdirSync(directory);
+
+  for (const item of items) {
+    const fullPath = path.join(directory, item);
+    if (fs.statSync(fullPath).isDirectory()) {
+      files = files.concat(getFilesRecursively(fullPath));
+    } else {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
 async function optimizeImages() {
   try {
-    // Read all files in photos directory
-    const files = fs.readdirSync(PHOTOS_DIR).filter((f) => {
-      const ext = path.extname(f).toLowerCase();
-      // Skip files that look like already-generated variants (e.g. name-small.jpg or name-small.webp)
-      const isVariantName = /-(small|medium|large)\./i.test(f);
-      return SUPPORTED_EXTENSIONS.includes(ext) && !f.startsWith('.') && !isVariantName;
+    const allFiles = getFilesRecursively(PHOTOS_DIR);
+
+    const originalImageFiles = allFiles.filter((filePath) => {
+      const ext = path.extname(filePath).toLowerCase();
+      const fileName = path.basename(filePath);
+      const isVariantName = /-(small|medium|large|lightbox)\./i.test(fileName);
+      return SUPPORTED_EXTENSIONS.includes(ext) && !fileName.startsWith('.') && !isVariantName;
     });
 
-    if (files.length === 0) {
-      console.log('No images found in public/photos/');
+    if (originalImageFiles.length === 0) {
+      console.log('No original images found in public/photos/ or its subdirectories.');
       return;
     }
 
-    console.log(`Found ${files.length} images to optimize...`);
+    console.log(`Found ${originalImageFiles.length} images to optimize...`);
 
     const metadata = {};
 
-    for (const file of files) {
-      const inputPath = path.join(PHOTOS_DIR, file);
-      const fileWithoutExt = path.parse(file).name;
+    for (const inputPath of originalImageFiles) {
+      const relativePath = path.relative(PHOTOS_DIR, inputPath); // e.g., 'coop/coop.jpg'
+      const file = path.basename(inputPath); // e.g., 'coop.jpg'
+      const fileWithoutExt = path.parse(file).name; // e.g., 'coop'
+      const dirWithoutPhotos = path.dirname(relativePath); // e.g., 'coop'
 
       try {
         const image = sharp(inputPath);
         const imageMetadata = await image.metadata();
 
-        console.log(`\nOptimizing: ${file} (${imageMetadata.width}x${imageMetadata.height})`);
+        console.log(`\nOptimizing: ${relativePath} (${imageMetadata.width}x${imageMetadata.height})`);
 
         // Generate blur placeholder (10px width, very low quality base64)
         const blurBuffer = await sharp(inputPath)
@@ -61,31 +81,32 @@ async function optimizeImages() {
         // Generate WebP versions for each size
         const variants = {};
         for (const [sizeKey, sizeValue] of Object.entries(SIZES)) {
+          // Construct webpPath to be in the same subdirectory as the original
           const webpFileName = `${fileWithoutExt}-${sizeKey}.webp`;
-          const webpPath = path.join(PHOTOS_DIR, webpFileName);
+          const webpPath = path.join(PHOTOS_DIR, dirWithoutPhotos, webpFileName);
 
           await sharp(inputPath)
             .resize(sizeValue, Math.round((imageMetadata.height / imageMetadata.width) * sizeValue), {
               fit: 'cover',
               withoutEnlargement: true,
             })
-            .webp({ quality: 80 })
+            .webp({ quality: 95 })
             .toFile(webpPath);
 
-          variants[sizeKey] = `/photos/${webpFileName}`;
+          variants[sizeKey] = `/photos/${dirWithoutPhotos}/${webpFileName}`; // URL path
           console.log(`  ✓ Generated ${sizeKey} WebP (${sizeValue}px)`);
         }
 
         // Store metadata for this image
-        metadata[file] = {
-          original: `/photos/${file}`,
+        metadata[relativePath] = { // Store by relative path, not just filename
+          original: `/photos/${relativePath}`,
           blur: blurBase64,
           variants: variants,
           width: imageMetadata.width,
           height: imageMetadata.height,
         };
       } catch (err) {
-        console.error(`Error optimizing ${file}:`, err.message);
+        console.error(`Error optimizing ${relativePath}:`, err.message);
       }
     }
 

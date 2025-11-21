@@ -106,7 +106,13 @@ npm run optimize-images
 
 **Performance Tips**
 - Keep originals reasonably sized (under ~5000px longest side) for faster variant generation.
-- Prefer JPG for photographs; PNG only when transparency/detail is needed.
+### Image Quality and Performance Balance
+
+To ensure the highest possible image quality while maintaining good loading performance, the following optimizations have been implemented:
+
+*   **Increased WebP Quality:** The `scripts/optimize-images.js` now generates WebP variants with a quality setting of `95` (up from `80`). This significantly reduces compression artifacts, resulting in visually higher quality images with a moderate increase in file size.
+*   **Lightbox-Specific Variant:** A new image size, `lightbox` (2048px wide), is generated during optimization. This variant provides a crisp, high-resolution image tailored for detailed viewing.
+*   **Smart Lightbox Loading:** The `components/Lightbox.tsx` component now intelligently uses the `lightbox` variant as its source if available. This ensures that users see the highest quality image without loading the original, potentially very large, source file, improving the lightbox's performance.
 
 ---
 
@@ -120,14 +126,44 @@ npm run optimize-images
 
 ---
 
-## Deployment
+## Deployment (AWS CI/CD)
 
-This site works well on Vercel (recommended for Next.js). Typical steps:
+This project is configured for a CI/CD pipeline deployment to AWS using ECS Fargate.
 
-1. Push to a Git repository (GitHub/GitLab).
-2. Connect the repository to Vercel and deploy the `main` branch.
+### Architecture
 
-Environment variables and advanced configuration can be set in the Vercel dashboard.
+1.  **Source:** A push to the `main` branch on GitHub triggers the pipeline.
+2.  **Build:** AWS CodeBuild uses the `Dockerfile` to build a production-ready Docker image and pushes it to Amazon ECR.
+3.  **Deploy:** AWS CodePipeline and CodeDeploy update an ECS service with the new Docker image, running on Fargate.
+
+### Required Files
+
+*   `Dockerfile`: A multi-stage Dockerfile that builds an optimized Next.js production image.
+*   `buildspec.yml`: The build specification for AWS CodeBuild. It defines the commands for building the Docker image, pushing it to ECR, and preparing deployment artifacts.
+
+### AWS Setup
+
+The pipeline requires the following AWS infrastructure to be set up manually:
+
+1.  **Amazon ECR (Elastic Container Registry):** A private repository to store the built Docker images.
+2.  **Amazon ECS (Elastic Container Service):**
+    *   An ECS Cluster.
+    *   A Task Definition that references the Docker image in ECR and configures container settings (CPU, memory, port mapping).
+    *   An ECS Service to run and manage the tasks, connected to a Load Balancer.
+
+### Pipeline Configuration (CodePipeline)
+
+1.  **Source Stage:** Connects to the GitHub repository's `main` branch.
+2.  **Build Stage:** Uses an AWS CodeBuild project configured with:
+    *   A Docker-privileged environment.
+    *   Build commands sourced from the `buildspec.yml` file.
+    *   The following environment variables:
+        *   `AWS_ACCOUNT_ID`: Your AWS Account ID.
+        *   `AWS_REGION`: The AWS Region (e.g., `us-east-1`).
+        *   `IMAGE_REPO_NAME`: The name of your ECR repository.
+        *   `CONTAINER_NAME`: The container name from your ECS Task Definition.
+        *   `IMAGE_TAG`: The tag for the Docker image (e.g., `latest` or a commit hash).
+3.  **Deploy Stage:** Uses the "Amazon ECS" provider to update the ECS service, using the `imagedefinitions.json` file from the build artifact to deploy the new version.
 
 ---
 

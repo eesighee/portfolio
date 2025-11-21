@@ -11,15 +11,16 @@ const HeroSection = () => {
     <section className="relative h-screen w-full overflow-hidden">
       {/* Full-Screen Background Image with Parallax */}
       <motion.div 
-        style={{ y }}
+        style={{ y, willChange: 'transform' }}
         className="absolute inset-0 w-full h-full"
       >
         <Image
-          src="/photos/austin_storm.jpg" 
+          src="/photos/hero/austin_storm.jpg" 
           alt="Featured photography"
           fill
           style={{ objectFit: "cover" }}
-          quality={75}
+          quality={90}
+          sizes="100vw" // Indicate that this image will always be 100% of the viewport width
           priority
           className="brightness-75"
         />

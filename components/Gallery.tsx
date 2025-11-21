@@ -16,7 +16,15 @@ type ImageMetadata = {
   height: number;
 };
 
-export default function Gallery({ images }: { images: string[] }) {
+export default function Gallery({
+  coopImages,
+  vetteImages,
+  myselfImages,
+}: {
+  coopImages: string[];
+  vetteImages: string[];
+  myselfImages: string[];
+}) {
   const [metadata, setMetadata] = useState<Record<string, ImageMetadata>>({});
 
   // Load image metadata for optimized variants
@@ -35,14 +43,10 @@ export default function Gallery({ images }: { images: string[] }) {
     loadMetadata();
   }, []);
 
-  // Group images so we can place specific filenames in sections
-  const myselfImages = images.filter((s) => s.toLowerCase().startsWith("/photos/myself"));
-  const coopImages = images.filter((s) => s.toLowerCase().includes("coop"));
-  const vetteImages = images.filter((s) => s.toLowerCase().includes("vette"));
-
   const renderImage = (src: string, i: number) => {
-    const fileName = src.split("/").pop() || src;
-    const imageMeta = metadata[fileName];
+    // Extract filename for metadata lookup (e.g., "coop/coop.jpg" -> "coop.jpg")
+    const fileName = src.split('/').pop() || src; 
+    const imageMeta = metadata[src]; // Metadata is now keyed by full path /photos/category/filename.jpg
 
     return (
       <motion.div
