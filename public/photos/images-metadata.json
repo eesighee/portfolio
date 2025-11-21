@@ -83,6 +83,18 @@
     "width": 4259,
     "height": 6389
   },
+  "profile/me.JPG": {
+    "original": "/photos/profile/me.JPG",
+    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAID/8QAHhAAAgICAgMAAAAAAAAAAAAAAQIAEQMhIjESM0H/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/ACtnLsAw431LTJj8F5ONdWdQrehT9szUMaGzBT//2Q==",
+    "variants": {
+      "small": "/photos/profile/me-small.webp",
+      "medium": "/photos/profile/me-medium.webp",
+      "large": "/photos/profile/me-large.webp",
+      "lightbox": "/photos/profile/me-lightbox.webp"
+    },
+    "width": 4240,
+    "height": 2832
+  },
   "vette/vette-2.jpg": {
     "original": "/photos/vette/vette-2.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAgME/8QAHxAAAQMDBQAAAAAAAAAAAAAAAQACEQMTIQUSFUGR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAv/EABYRAQEBAAAAAAAAAAAAAAAAAAEAAv/aAAwDAQACEQMRAD8AtU1MNO0FkjrKPJPObbfSsbmi4TAmUkTMlv/Z",

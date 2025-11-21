@@ -1,7 +1,10 @@
+'use client'
+
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DisableDevtools from "../components/DisableDevtools";
+import { LenisProvider } from "../components/LenisProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -13,10 +16,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Fotos de Alegría",
-  description: "Personal photography portfolio — photos and small gallery",
-};
 
 export default function RootLayout({
   children,
@@ -36,9 +35,12 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Client component that attempts to disable React DevTools and common shortcuts in production */}
-        <DisableDevtools />
-        {children}
+        <LenisProvider>
+          {/* Client component that attempts to disable React DevTools and common shortcuts in production */}
+          <DisableDevtools />
+          {children}
+        </LenisProvider>
+        <div className="gemini-watermark">© 2025 Alegria Productions</div>
       </body>
     </html>
   );

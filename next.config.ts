@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   // Note: setting `devIndicators: false` will remove the 'N' badge in the dev UI.
   devIndicators: (false as unknown) as any,
   // Next.js uses SWC minification by default in modern versions; no explicit option required here.
+  images: {
+    qualities: [75, 90],
+  },
 };
 
 export default nextConfig;

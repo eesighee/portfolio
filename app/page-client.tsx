@@ -43,7 +43,7 @@ export default function HomeClient({
           id="gallery"
           className="text-4xl font-bold text-center mb-12 border-b-2 border-[var(--accent)]/20 pb-4"
         >
-          Snapshots of My Life
+          Moments In Time
         </motion.h2>
 
         <Gallery coopImages={coopImages} vetteImages={vetteImages} myselfImages={myselfImages} />
@@ -71,8 +71,9 @@ export default function HomeClient({
                 />
               </div>
               <p className="text-[var(--text-light)] leading-relaxed text-lg">
-                Welcome to my photography portfolio. My name is Isai Alegria, I am a software engineer and photographer (kinda). 
-                I enjoy capturing life's fleeting moments through my lens and writing buggy code.
+                Welcome to my photography portfolio. My name is Isai Alegria, 
+                I wanted to build a little project to share some of my favorite memories
+                with you guys.
                 Feel free to explore the gallery and contact me with any questions, ideas, or if you want to collab!
               </p>
             </div>
@@ -84,39 +85,37 @@ export default function HomeClient({
             className="card mt-16 text-center max-w-3xl mx-auto border-2 border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)]"
           >
             <h3 className="text-2xl font-semibold text-[var(--text-light)] mb-6">Connect</h3>
-            <div className="flex gap-4 items-center justify-center flex-wrap">
-              <a 
-                href="mailto:eesighee@gmail.com" 
-                className="inline-block px-8 py-3 text-[var(--primary-dark)] rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
-                style={{
-                  backgroundImage: 'linear-gradient(135deg, #C5A05E 0%, #B8860B 50%, #9A7209 100%)'
-                }}
-              >
-                Email
-              </a>
-              <a 
-                href="https://instagram.com/c8_sai" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block px-8 py-3 text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
-                style={{
-                  backgroundImage: 'linear-gradient(135deg, #f687b3 0%, #ec4899 50%, #db2777 100%)'
-                }}
-              >
-                Instagram
-              </a>
-              <a 
-                href="https://twitter.com/eesighee" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-block px-8 py-3 text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
-                style={{
-                  backgroundImage: 'linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%)'
-                }}
-              >
-                Twitter / X
-              </a>
-            </div>
+            <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+                                                                                                  <a
+                                                                                                    href="mailto:eesighee@gmail.com"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-[var(--primary-dark)] rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                                    style={{
+                                                                                                                      backgroundImage: 'linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFA000 100%)'
+                                                                                                                    }}                                                                                                  >
+                                                                                                    Email
+                                                                                                  </a>
+                                                                                                  <a
+                                                                                                    href="https://instagram.com/c8_sai"
+                                                                                                    target="_blank"
+                                                                                                    rel="noopener noreferrer"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                    style={{
+                                                                                                      backgroundImage: 'linear-gradient(135deg, #f687b3 0%, #ec4899 50%, #db2777 100%)'
+                                                                                                    }}
+                                                                                                  >
+                                                                                                    Instagram
+                                                                                                  </a>
+                                                                                                  <a
+                                                                                                    href="https://twitter.com/eesighee"
+                                                                                                    target="_blank"
+                                                                                                    rel="noopener noreferrer"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                    style={{
+                                                                                                      backgroundImage: 'linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%)'
+                                                                                                    }}
+                                                                                                  >
+                                                                                                    Twitter / X
+                                                                                                  </a>            </div>
           </motion.section>
         </div>
       </main>
