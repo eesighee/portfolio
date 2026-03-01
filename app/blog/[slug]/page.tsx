@@ -84,7 +84,7 @@ export default async function BlogPostPage({
           {post.description}
         </p>
 
-        <div className="space-y-10">
+        <div className="space-y-4 md:space-y-10">
           {photos.map((photo, i) => (
             <figure key={i}>
               <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
