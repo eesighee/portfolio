@@ -95,7 +95,7 @@ export default function HomeClient({
                                                                                                     Email
                                                                                                   </a>
                                                                                                   <a
-                                                                                                    href="https://instagram.com/c8_sai"
+                                                                                                    href="https://instagram.com/eesighee_"
                                                                                                     target="_blank"
                                                                                                     rel="noopener noreferrer"
                                                                                                     className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"

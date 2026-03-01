@@ -1,6 +1,5 @@
 'use client'
 
-import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DisableDevtools from "../components/DisableDevtools";
@@ -40,7 +39,7 @@ export default function RootLayout({
           <DisableDevtools />
           {children}
         </LenisProvider>
-        <div className="gemini-watermark">© 2025 Alegria Productions</div>
+        <div className="gemini-watermark">© 2026 Alegria Productions</div>
       </body>
     </html>
   );
