@@ -65,15 +65,16 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext, metad
               src={imageSrc}
               alt={`Photo ${index + 1}`}
               fill
+              sizes="100vw"
               style={{ objectFit: "contain" }}
               priority
             />
           </motion.div>
 
           <div className="mt-4 flex items-center justify-between gap-4 text-white">
-            <button onClick={onPrev} className="rounded bg-white/10 px-3 py-2">Prev</button>
-            <button onClick={onClose} className="rounded bg-white/10 px-3 py-2">Close</button>
-            <button onClick={onNext} className="rounded bg-white/10 px-3 py-2">Next</button>
+            <button type="button" onClick={onPrev} aria-label="Previous photo" className="rounded bg-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white">Prev</button>
+            <button type="button" onClick={onClose} aria-label="Close lightbox" className="rounded bg-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white">Close</button>
+            <button type="button" onClick={onNext} aria-label="Next photo" className="rounded bg-white/10 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-white">Next</button>
           </div>
         </motion.div>
       </motion.div>

@@ -88,7 +88,8 @@ export default function HomeClient({
             <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
                                                                                                   <a
                                                                                                     href="mailto:eesighee@gmail.com"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-[var(--primary-dark)] rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                    aria-label="Email eesighee@gmail.com"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-[var(--primary-dark)] rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
                                                                                                                     style={{
                                                                                                                       backgroundImage: 'linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFA000 100%)'
                                                                                                                     }}                                                                                                  >
@@ -98,7 +99,8 @@ export default function HomeClient({
                                                                                                     href="https://instagram.com/eesighee_"
                                                                                                     target="_blank"
                                                                                                     rel="noopener noreferrer"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                    aria-label="Instagram (opens in new window)"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
                                                                                                     style={{
                                                                                                       backgroundImage: 'linear-gradient(135deg, #f687b3 0%, #ec4899 50%, #db2777 100%)'
                                                                                                     }}
@@ -109,7 +111,8 @@ export default function HomeClient({
                                                                                                     href="https://twitter.com/eesighee"
                                                                                                     target="_blank"
                                                                                                     rel="noopener noreferrer"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white"
+                                                                                                    aria-label="Twitter / X (opens in new window)"
+                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
                                                                                                     style={{
                                                                                                       backgroundImage: 'linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%)'
                                                                                                     }}

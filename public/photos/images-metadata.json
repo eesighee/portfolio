@@ -1,36 +1,36 @@
 {
-  "coop/coop-snow-2.jpg": {
-    "original": "/photos/coop/coop-snow-2.jpg",
-    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACAQAAEDAgcAAAAAAAAAAAAAAAEAAyESQQIREzFRU7H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AHQGaajJgEW5VdFzu9SPAHHkZ2WiyD//Z",
-    "variants": {
-      "small": "/photos/coop/coop-snow-2-small.webp",
-      "medium": "/photos/coop/coop-snow-2-medium.webp",
-      "large": "/photos/coop/coop-snow-2-large.webp",
-      "lightbox": "/photos/coop/coop-snow-2-lightbox.webp"
-    },
-    "width": 4260,
-    "height": 6390
-  },
-  "coop/coop.jpg": {
-    "original": "/photos/coop/coop.jpg",
+  "coop/coop-1.jpg": {
+    "original": "/photos/coop/coop-1.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAwT/xAAfEAABAwMFAAAAAAAAAAAAAAABAAIRAxITIjRScZL/xAAVAQEBAAAAAAAAAAAAAAAAAAABAv/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AB1PpNyEuuJLpMyAguq8z6VTdqOiplJf/9k=",
     "variants": {
-      "small": "/photos/coop/coop-small.webp",
-      "medium": "/photos/coop/coop-medium.webp",
-      "large": "/photos/coop/coop-large.webp",
-      "lightbox": "/photos/coop/coop-lightbox.webp"
+      "small": "/photos/coop/coop-1-small.webp",
+      "medium": "/photos/coop/coop-1-medium.webp",
+      "large": "/photos/coop/coop-1-large.webp",
+      "lightbox": "/photos/coop/coop-1-lightbox.webp"
     },
     "width": 4291,
     "height": 6845
   },
-  "coop/coop_bday.jpg": {
-    "original": "/photos/coop/coop_bday.jpg",
+  "coop/coop-2.jpg": {
+    "original": "/photos/coop/coop-2.jpg",
+    "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EACAQAAEDAgcAAAAAAAAAAAAAAAEAAyESQQIREzFRU7H/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AHQGaajJgEW5VdFzu9SPAHHkZ2WiyD//Z",
+    "variants": {
+      "small": "/photos/coop/coop-2-small.webp",
+      "medium": "/photos/coop/coop-2-medium.webp",
+      "large": "/photos/coop/coop-2-large.webp",
+      "lightbox": "/photos/coop/coop-2-lightbox.webp"
+    },
+    "width": 4260,
+    "height": 6390
+  },
+  "coop/coop-3.jpg": {
+    "original": "/photos/coop/coop-3.jpg",
     "blur": "data:image/jpeg;base64,/9j/2wBDACgcHiMeGSgjISMtKygwPGRBPDc3PHtYXUlkkYCZlo+AjIqgtObDoKrarYqMyP/L2u71////m8H////6/+b9//j/2wBDASstLTw1PHZBQXb4pYyl+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj4+Pj/wAARCAAKAAoDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAQIDBf/EACEQAAIBAgYDAAAAAAAAAAAAAAECAAMRBBIVMTJRYnGS/8QAFAEBAAAAAAAAAAAAAAAAAAAAA//EABcRAAMBAAAAAAAAAAAAAAAAAAABEVH/2gAMAwEAAhEDEQA/AKU8dVVSWdWNwLEbR9QqePzMxeLeoMx7MF3RVD//2Q==",
     "variants": {
-      "small": "/photos/coop/coop_bday-small.webp",
-      "medium": "/photos/coop/coop_bday-medium.webp",
-      "large": "/photos/coop/coop_bday-large.webp",
-      "lightbox": "/photos/coop/coop_bday-lightbox.webp"
+      "small": "/photos/coop/coop-3-small.webp",
+      "medium": "/photos/coop/coop-3-medium.webp",
+      "large": "/photos/coop/coop-3-large.webp",
+      "lightbox": "/photos/coop/coop-3-lightbox.webp"
     },
     "width": 1365,
     "height": 2048

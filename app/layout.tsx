@@ -1,5 +1,4 @@
-'use client'
-
+import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DisableDevtools from "../components/DisableDevtools";
@@ -15,6 +14,30 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000"
+  ),
+  title: "Fotos de Alegria",
+  description:
+    "Personal photography portfolio by Isai Alegria — photos and small gallery",
+  openGraph: {
+    title: "Fotos de Alegria",
+    description:
+      "Personal photography portfolio by Isai Alegria — photos and small gallery",
+    images: [{ url: "/photos/hero/austin_storm.jpg" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fotos de Alegria",
+    description:
+      "Personal photography portfolio by Isai Alegria — photos and small gallery",
+    images: ["/photos/hero/austin_storm.jpg"],
+  },
+};
 
 export default function RootLayout({
   children,
@@ -23,14 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Favicon set with multiple sizes for different contexts */}
-        <link rel="icon" type="image/x-icon" href="/photos/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/photos/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/photos/favicon-16x16.png" />
-        <link rel="apple-touch-icon" href="/photos/apple-touch-icon.png" />
-        <link rel="shortcut icon" href="/photos/favicon.ico" />
-      </head>
+      <head />
       <body
         className={`${inter.variable} ${geistMono.variable} antialiased`}
       >
@@ -39,7 +55,7 @@ export default function RootLayout({
           <DisableDevtools />
           {children}
         </LenisProvider>
-        <div className="gemini-watermark">© 2026 Alegria Productions</div>
+        <div className="gemini-watermark">&copy; 2026 Alegria Productions</div>
       </body>
     </html>
   );

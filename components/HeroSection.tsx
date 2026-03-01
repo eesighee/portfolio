@@ -62,7 +62,7 @@ const HeroSection = () => {
         >
           <motion.a 
             href="#gallery" 
-            className="px-8 py-3 text-lg font-medium text-primary-dark bg-callout hover:bg-opacity-90 transition duration-300 cursor-pointer rounded-sm border border-white"
+            className="px-8 py-3 text-lg font-medium text-primary-dark bg-callout hover:bg-opacity-90 transition duration-300 cursor-pointer rounded-sm border border-white focus:outline-none focus:ring-2 focus:ring-white"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(184, 134, 11, 0.3)" }}
             whileTap={{ scale: 0.98 }}
           >
@@ -70,7 +70,7 @@ const HeroSection = () => {
           </motion.a>
           <motion.a 
             href="#about" 
-            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm"
+            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(163, 163, 163, 0.2)" }}
             whileTap={{ scale: 0.98 }}
           >
