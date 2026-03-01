@@ -68,13 +68,21 @@ const HeroSection = () => {
           >
             View Gallery
           </motion.a>
-          <motion.a 
-            href="#about" 
+          <motion.a
+            href="#about"
             className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(163, 163, 163, 0.2)" }}
             whileTap={{ scale: 0.98 }}
           >
             About Me
+          </motion.a>
+          <motion.a
+            href="/blog"
+            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
+            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(163, 163, 163, 0.2)" }}
+            whileTap={{ scale: 0.98 }}
+          >
+            Blog
           </motion.a>
         </motion.div>
       </div>

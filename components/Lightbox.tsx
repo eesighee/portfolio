@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { isRemoteImage } from "../lib/image-utils";
 
 type ImageMetadata = {
   original: string;
@@ -37,7 +38,7 @@ export default function Lightbox({ images, index, onClose, onPrev, onNext, metad
 
   const currentImage = images[index];
   const fileName = currentImage.split('/').pop() || currentImage;
-  const imageMeta = metadata[fileName];
+  const imageMeta = isRemoteImage(currentImage) ? undefined : metadata[fileName];
 
   // Use the high-quality lightbox variant if it exists, otherwise fall back to the original
   const imageSrc = imageMeta?.variants?.lightbox || currentImage;

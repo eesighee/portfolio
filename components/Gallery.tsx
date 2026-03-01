@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { isRemoteImage } from "../lib/image-utils";
 
 type ImageMetadata = {
   original: string;
@@ -44,9 +45,8 @@ export default function Gallery({
   }, []);
 
   const renderImage = (src: string, i: number) => {
-    // Extract filename for metadata lookup (e.g., "coop/coop.jpg" -> "coop.jpg")
-    const fileName = src.split('/').pop() || src; 
-    const imageMeta = metadata[src]; // Metadata is now keyed by full path /photos/category/filename.jpg
+    // Skip metadata lookup for remote (CDN) images
+    const imageMeta = isRemoteImage(src) ? undefined : metadata[src];
 
     return (
       <motion.div

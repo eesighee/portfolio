@@ -9,6 +9,20 @@ const nextConfig: NextConfig = {
   // Next.js uses SWC minification by default in modern versions; no explicit option required here.
   images: {
     qualities: [75, 90],
+    remotePatterns: [
+      ...(process.env.NEXT_PUBLIC_CDN_URL
+        ? [
+            {
+              protocol: "https" as const,
+              hostname: new URL(process.env.NEXT_PUBLIC_CDN_URL).hostname,
+            },
+          ]
+        : []),
+      {
+        protocol: "https" as const,
+        hostname: "media.lumavue.co",
+      },
+    ],
   },
 };
 
