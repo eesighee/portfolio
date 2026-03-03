@@ -58,19 +58,19 @@ const HeroSection = () => {
         <div className="flex space-x-4">
           <a
             href="#gallery"
-            className="px-8 py-3 text-lg font-medium text-darkroom bg-safelight hover:brightness-110 transition duration-300 cursor-pointer rounded-sm border border-safelight-glow/30 hover:shadow-lg hover:shadow-safelight/20 focus:outline-none focus:ring-2 focus:ring-safelight"
+            className="px-6 py-2 text-sm md:px-8 md:py-3 md:text-lg font-medium text-darkroom bg-safelight hover:brightness-110 transition duration-300 cursor-pointer rounded-sm border border-safelight-glow/30 hover:shadow-lg hover:shadow-safelight/20 focus:outline-none focus:ring-2 focus:ring-safelight"
           >
             View Gallery
           </a>
           <a
             href="#about"
-            className="px-8 py-3 text-lg font-medium text-silver border border-[var(--edge-bright)] hover:border-safelight hover:text-safelight transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-safelight"
+            className="px-6 py-2 text-sm md:px-8 md:py-3 md:text-lg font-medium text-silver border border-[var(--edge-bright)] hover:border-safelight hover:text-safelight transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-safelight"
           >
             About Me
           </a>
           <a
             href="/blog"
-            className="px-8 py-3 text-lg font-medium text-silver border border-[var(--edge-bright)] hover:border-safelight hover:text-safelight transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-safelight"
+            className="px-6 py-2 text-sm md:px-8 md:py-3 md:text-lg font-medium text-silver border border-[var(--edge-bright)] hover:border-safelight hover:text-safelight transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-safelight"
           >
             Blog
           </a>
