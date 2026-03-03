@@ -10,17 +10,17 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Full-Screen Background Image with Parallax */}
-      <motion.div 
+      <motion.div
         style={{ y, willChange: 'transform' }}
         className="absolute inset-0 w-full h-full"
       >
         <Image
-          src="/photos/hero/austin_storm.jpg" 
+          src="/photos/hero/austin_storm.jpg"
           alt="Featured photography"
           fill
           style={{ objectFit: "cover" }}
           quality={90}
-          sizes="100vw" // Indicate that this image will always be 100% of the viewport width
+          sizes="100vw"
           priority
           className="brightness-75"
         />
@@ -28,14 +28,15 @@ const HeroSection = () => {
 
       {/* Text Content & Overlay */}
       <div className="absolute inset-0 bg-primary-dark/40 flex flex-col justify-end pb-4 pt-4 md:p-16 lg:p-24">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="text-5xl md:text-7xl lg:text-8xl font-sans font-bold text-text-light drop-shadow-lg leading-tight mb-4"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold text-text-light drop-shadow-lg leading-tight mb-4"
+          style={{ fontFamily: "var(--font-display), serif" }}
         >
           <span className="block">Fotos de</span>
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
@@ -44,8 +45,8 @@ const HeroSection = () => {
             Alegría.
           </motion.span>
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.6, ease: "easeOut" }}
@@ -54,37 +55,26 @@ const HeroSection = () => {
           Software Engineer & Photographer. I build scalable systems and capture life's moments.
         </motion.p>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.9, ease: "easeOut" }}
-          className="flex space-x-4"
-        >
-          <motion.a 
-            href="#gallery" 
-            className="px-8 py-3 text-lg font-medium text-primary-dark bg-callout hover:bg-opacity-90 transition duration-300 cursor-pointer rounded-sm border border-white focus:outline-none focus:ring-2 focus:ring-white"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(184, 134, 11, 0.3)" }}
-            whileTap={{ scale: 0.98 }}
+        <div className="flex space-x-4">
+          <a
+            href="#gallery"
+            className="px-8 py-3 text-lg font-medium text-primary-dark bg-callout hover:brightness-110 transition duration-300 cursor-pointer rounded-sm border border-white hover:shadow-lg hover:shadow-[var(--gold)]/20 focus:outline-none focus:ring-2 focus:ring-white"
           >
             View Gallery
-          </motion.a>
-          <motion.a
+          </a>
+          <a
             href="#about"
-            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(163, 163, 163, 0.2)" }}
-            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:border-[var(--gold)] hover:text-[var(--gold)] transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
           >
             About Me
-          </motion.a>
-          <motion.a
+          </a>
+          <a
             href="/blog"
-            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:bg-accent/20 transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
-            whileHover={{ scale: 1.05, boxShadow: "0 10px 30px rgba(163, 163, 163, 0.2)" }}
-            whileTap={{ scale: 0.98 }}
+            className="px-8 py-3 text-lg font-medium text-text-light border border-accent hover:border-[var(--gold)] hover:text-[var(--gold)] transition duration-300 cursor-pointer rounded-sm focus:outline-none focus:ring-2 focus:ring-white"
           >
             Blog
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   );

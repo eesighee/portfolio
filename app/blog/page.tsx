@@ -29,7 +29,7 @@ export default async function BlogPage() {
 
   return (
     <div
-      className="min-h-screen text-[var(--text-light)]"
+      className="min-h-screen text-[var(--text-light)] pt-20"
       style={{
         backgroundImage: `
           radial-gradient(circle, rgba(255,255,255,0.08) 1.5px, transparent 1.5px),
@@ -39,14 +39,8 @@ export default async function BlogPage() {
         backgroundAttachment: "scroll, fixed",
       }}
     >
-      <header className="container mx-auto px-4 pt-12 pb-8 flex items-center justify-between">
+      <header className="container mx-auto px-4 pt-8 pb-8">
         <h1 className="text-4xl font-bold">Blog</h1>
-        <Link
-          href="/"
-          className="px-6 py-2 text-sm font-medium text-[var(--text-light)] border border-[var(--accent)] rounded-sm hover:bg-[var(--accent)]/20 transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
-        >
-          Home
-        </Link>
       </header>
 
       <main className="container mx-auto px-4 pb-16">
@@ -55,12 +49,12 @@ export default async function BlogPage() {
             No posts yet — check back soon.
           </p>
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {sorted.map((post, i) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="group card border border-[var(--accent)]/20 bg-[var(--secondary-dark)] rounded-sm overflow-hidden hover:border-[var(--accent)]/50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
+                className="group card border border-[var(--gold)]/20 bg-[var(--secondary-dark)] rounded-sm overflow-hidden hover:border-[var(--gold)]/50 transition duration-300 focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
               >
                 {thumbnails[i] && (
                   <div className="relative w-full h-48">
@@ -81,7 +75,7 @@ export default async function BlogPage() {
                       day: "numeric",
                     })}
                   </time>
-                  <h2 className="text-xl font-semibold mt-1 group-hover:text-[var(--callout)] transition-colors">
+                  <h2 className="text-xl font-semibold mt-1 group-hover:text-[var(--gold)] transition-colors">
                     {post.title}
                   </h2>
                   <p className="text-sm text-[var(--accent)] mt-2 line-clamp-2">

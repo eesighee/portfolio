@@ -28,7 +28,6 @@ export default function Gallery({
 }) {
   const [metadata, setMetadata] = useState<Record<string, ImageMetadata>>({});
 
-  // Load image metadata for optimized variants
   useEffect(() => {
     async function loadMetadata() {
       try {
@@ -45,50 +44,72 @@ export default function Gallery({
   }, []);
 
   const renderImage = (src: string, i: number) => {
-    // Skip metadata lookup for remote (CDN) images
     const imageMeta = isRemoteImage(src) ? undefined : metadata[src];
+    const aspectW = imageMeta?.width ?? 3;
+    const aspectH = imageMeta?.height ?? 4;
 
     return (
       <motion.div
         key={src}
         initial={{ opacity: 0, scale: 0.95, filter: "blur(10px)" }}
         whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-        viewport={{ once: false, margin: "-100px" }}
+        viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="w-full"
+        className="mb-4 break-inside-avoid group"
       >
-        <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] gap-x-2 gap-y-2">
+        <div
+          className="relative w-full overflow-hidden rounded-sm transition-all duration-300 group-hover:shadow-xl group-hover:shadow-black/30"
+          style={{ aspectRatio: `${aspectW} / ${aspectH}` }}
+        >
           <Image
             src={src}
             alt={`Photo ${i + 1}`}
             fill
             style={{ objectFit: "contain" }}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="rounded-sm"
+            className="rounded-sm transition-transform duration-300 group-hover:scale-[1.03]"
           />
         </div>
       </motion.div>
     );
   };
 
+  const sectionHeader = (title: string) => (
+    <div className="py-6 mb-2">
+      <h3 className="text-2xl font-semibold text-[var(--text-light)] tracking-wide text-center">
+        {title}
+      </h3>
+      <div className="mt-2 mx-auto w-16 h-px bg-[var(--gold)]/40" />
+    </div>
+  );
+
   return (
-    <section className="card w-full border border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)] space-y-2">
+    <section className="card w-full border border-[var(--gold)]/20 p-8 bg-[var(--secondary-dark)] rounded-sm space-y-4">
       {coopImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
-          {coopImages.map((src, i) => renderImage(src, i))}
-        </div>
+        <>
+          {sectionHeader("Coop")}
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
+            {coopImages.map((src, i) => renderImage(src, i))}
+          </div>
+        </>
       )}
 
       {vetteImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
-          {vetteImages.map((src, i) => renderImage(src, i))}
-        </div>
+        <>
+          {sectionHeader("Auto")}
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
+            {vetteImages.map((src, i) => renderImage(src, i))}
+          </div>
+        </>
       )}
 
       {myselfImages.length > 0 && (
-        <div className="grid grid-cols-1 gap-x-2 gap-y-2 sm:grid-cols-2 md:grid-cols-3">
-          {myselfImages.map((src, i) => renderImage(src, i))}
-        </div>
+        <>
+          {sectionHeader("Self-Portraits")}
+          <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
+            {myselfImages.map((src, i) => renderImage(src, i))}
+          </div>
+        </>
       )}
     </section>
   );

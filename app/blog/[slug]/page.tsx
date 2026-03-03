@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { posts } from "../../../content/posts";
 import { fetchShareLinkAssets, resolvePhotos } from "../../../lib/lumavue";
@@ -50,7 +49,7 @@ export default async function BlogPostPage({
 
   return (
     <div
-      className="min-h-screen text-[var(--text-light)]"
+      className="min-h-screen text-[var(--text-light)] pt-20"
       style={{
         backgroundImage: `
           radial-gradient(circle, rgba(255,255,255,0.08) 1.5px, transparent 1.5px),
@@ -60,16 +59,7 @@ export default async function BlogPostPage({
         backgroundAttachment: "scroll, fixed",
       }}
     >
-      <header className="container mx-auto px-4 pt-12 pb-8">
-        <Link
-          href="/blog"
-          className="inline-block px-6 py-2 text-sm font-medium text-[var(--text-light)] border border-[var(--accent)] rounded-sm hover:bg-[var(--accent)]/20 transition duration-300 focus:outline-none focus:ring-2 focus:ring-white"
-        >
-          &larr; Back to Blog
-        </Link>
-      </header>
-
-      <main className="container mx-auto px-4 pb-16 max-w-4xl">
+      <main className="container mx-auto px-4 pb-16 max-w-4xl pt-8">
         <time className="text-sm text-[var(--accent)]">
           {new Date(post.date).toLocaleDateString("en-US", {
             year: "numeric",
@@ -80,13 +70,15 @@ export default async function BlogPostPage({
         <h1 className="text-4xl md:text-5xl font-bold mt-2 mb-4">
           {post.title}
         </h1>
-        <p className="text-lg text-[var(--accent)] mb-12">
+        <p className="text-lg text-[var(--accent)] mb-16">
           {post.description}
         </p>
 
-        <div className="space-y-4 md:space-y-10">
+        <div className="w-16 h-px bg-[var(--gold)]/40 mx-auto mb-12" />
+
+        <div className="space-y-8 md:space-y-16">
           {photos.map((photo, i) => (
-            <figure key={i}>
+            <figure key={i} className="border border-white/10 rounded-sm p-3 bg-[var(--secondary-dark)]">
               <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
                 <Image
                   src={photo.src}
@@ -98,7 +90,7 @@ export default async function BlogPostPage({
                 />
               </div>
               {photo.caption && (
-                <figcaption className="mt-3 text-center text-sm text-[var(--accent)]">
+                <figcaption className="mt-4 text-center text-sm text-[var(--accent)]">
                   {photo.caption}
                 </figcaption>
               )}

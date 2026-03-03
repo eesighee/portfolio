@@ -17,12 +17,12 @@ export default function HomeClient({
   const animationProps = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: false },
+    viewport: { once: true },
     transition: { duration: 0.5 }
   };
 
   return (
-    <div 
+    <div
       className="min-h-screen text-[var(--text-light)]"
       style={{
         backgroundImage: `
@@ -41,7 +41,7 @@ export default function HomeClient({
         <motion.h2
           {...animationProps}
           id="gallery"
-          className="text-4xl font-bold text-center mb-12 border-b-2 border-[var(--accent)]/20 pb-4"
+          className="text-4xl font-bold text-center mb-12 border-b-2 border-[var(--gold)]/30 pb-4"
         >
           Moments In Time
         </motion.h2>
@@ -58,10 +58,10 @@ export default function HomeClient({
           <motion.section
             {...animationProps}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="card max-w-3xl mx-auto border-2 border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)]"
+            className="card max-w-3xl mx-auto border border-[var(--gold)]/20 p-8 bg-[var(--secondary-dark)] rounded-sm"
           >
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="relative w-48 h-48 flex-shrink-0 rounded-full overflow-hidden border-4 border-[var(--accent)]/30">
+            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+              <div className="relative w-56 h-56 flex-shrink-0 rounded-full overflow-hidden border-4 border-[var(--gold)]/30">
                 <Image
                   src="/photos/profile/me.JPG"
                   alt="Isai Alegria"
@@ -70,55 +70,43 @@ export default function HomeClient({
                   className="rounded-full"
                 />
               </div>
-              <p className="text-[var(--text-light)] leading-relaxed text-lg">
-                Welcome to my photography portfolio. My name is Isai Alegria, 
-                I wanted to build a little project to share some of my favorite memories
-                with you guys.
-                Feel free to explore the gallery and contact me with any questions, ideas, or if you want to collab!
-              </p>
+              <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                <h3 className="text-3xl font-bold text-[var(--text-light)] self-center">Isai Alegria</h3>
+                <p className="text-[var(--gold)] font-medium mt-1 mb-4 self-center">Software Engineer & Photographer</p>
+                <p className="text-[var(--text-light)] leading-relaxed text-lg">
+                  Welcome to my portfolio — a space where I share some of my favorite moments through the lens.
+                  Feel free to explore the gallery, and don't hesitate to reach out with any questions, ideas, or collaboration opportunities.
+                </p>
+                <div className="w-16 h-px bg-[var(--gold)]/40 my-6" />
+                <div className="flex flex-col sm:flex-row gap-4 items-center">
+                  <a
+                    href="mailto:eesighee@gmail.com"
+                    aria-label="Email eesighee@gmail.com"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  >
+                    Email
+                  </a>
+                  <a
+                    href="https://instagram.com/eesighee_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram (opens in new window)"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  >
+                    Instagram
+                  </a>
+                  <a
+                    href="https://twitter.com/eesighee"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Twitter / X (opens in new window)"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                  >
+                    Twitter / X
+                  </a>
+                </div>
+              </div>
             </div>
-          </motion.section>
-
-          <motion.section
-            {...animationProps}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="card mt-16 text-center max-w-3xl mx-auto border-2 border-[var(--accent)]/20 p-8 bg-[var(--secondary-dark)]"
-          >
-            <h3 className="text-2xl font-semibold text-[var(--text-light)] mb-6">Connect</h3>
-            <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
-                                                                                                  <a
-                                                                                                    href="mailto:eesighee@gmail.com"
-                                                                                                    aria-label="Email eesighee@gmail.com"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-[var(--primary-dark)] rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
-                                                                                                                    style={{
-                                                                                                                      backgroundImage: 'linear-gradient(135deg, #FFD700 0%, #FFC107 50%, #FFA000 100%)'
-                                                                                                                    }}                                                                                                  >
-                                                                                                    Email
-                                                                                                  </a>
-                                                                                                  <a
-                                                                                                    href="https://instagram.com/eesighee_"
-                                                                                                    target="_blank"
-                                                                                                    rel="noopener noreferrer"
-                                                                                                    aria-label="Instagram (opens in new window)"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
-                                                                                                    style={{
-                                                                                                      backgroundImage: 'linear-gradient(135deg, #f687b3 0%, #ec4899 50%, #db2777 100%)'
-                                                                                                    }}
-                                                                                                  >
-                                                                                                    Instagram
-                                                                                                  </a>
-                                                                                                  <a
-                                                                                                    href="https://twitter.com/eesighee"
-                                                                                                    target="_blank"
-                                                                                                    rel="noopener noreferrer"
-                                                                                                    aria-label="Twitter / X (opens in new window)"
-                                                                                                    className="inline-block px-8 py-3 w-48 md:w-auto text-white rounded-sm font-semibold hover:scale-105 transform transition-all duration-200 shadow-lg hover:shadow-xl border border-white focus:outline-none focus:ring-2 focus:ring-white"
-                                                                                                    style={{
-                                                                                                      backgroundImage: 'linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%)'
-                                                                                                    }}
-                                                                                                  >
-                                                                                                    Twitter / X
-                                                                                                  </a>            </div>
           </motion.section>
         </div>
       </main>

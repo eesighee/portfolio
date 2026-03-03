@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Geist_Mono } from "next/font/google";
+import { Cormorant_Garamond, Outfit } from "next/font/google";
 import "./globals.css";
-import DisableDevtools from "../components/DisableDevtools";
 import { LenisProvider } from "../components/LenisProvider";
+import Navbar from "../components/Navbar";
 
-const inter = Inter({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "600", "700"],
+  variable: "--font-display",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const outfit = Outfit({
   subsets: ["latin"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
@@ -48,14 +49,13 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body
-        className={`${inter.variable} ${geistMono.variable} antialiased`}
+        className={`${cormorant.variable} ${outfit.variable} antialiased`}
       >
         <LenisProvider>
-          {/* Client component that attempts to disable React DevTools and common shortcuts in production */}
-          <DisableDevtools />
+          <Navbar />
           {children}
         </LenisProvider>
-        <div className="gemini-watermark">&copy; 2026 Alegria Productions</div>
+        <div className="copyright-badge">&copy; 2026 Alegria Productions</div>
       </body>
     </html>
   );
