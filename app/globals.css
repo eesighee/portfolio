@@ -1,60 +1,85 @@
 @import "tailwindcss";
 
-:root {
-  --background: #f3f4f6;
-  --foreground: #171717;
-  --card-bg: #f0f2f4;
-  --card-foreground: #111827;
-  --dot: rgba(0,0,0,0.06);
+/* ─── Darkroom Token System ─── */
 
-  --primary-dark: #1A1A1A;
-  --secondary-dark: #1c1c1c;
-  --text-light: #F5F5F5;
-  --accent: #E5E7EB;
-  --callout: #B8860B;
-  --gold: #B8860B;
-  --gold-light: #D4A017;
+:root {
+  /* Canvas — the room itself */
+  --darkroom: #141414;
+  --film: #1c1c1c;
+  --print: #242424;
+
+  /* Silver — text hierarchy, bright prints to faint residue */
+  --silver: #f0f0f0;
+  --silver-soft: #a3a3a3;
+  --silver-faint: #737373;
+  --silver-ghost: #404040;
+
+  /* Safelight — the only warm light */
+  --safelight: #B8860B;
+  --safelight-glow: #D4A017;
+
+  /* Edges — borders that disappear when you're not looking */
+  --edge: rgba(255, 255, 255, 0.08);
+  --edge-soft: rgba(255, 255, 255, 0.04);
+  --edge-bright: rgba(255, 255, 255, 0.15);
+
+  /* Grain — film texture */
+  --grain: rgba(255, 255, 255, 0.03);
 }
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --darkroom: #f0f1f3;
+    --film: #e4e6ea;
+    --print: #ffffff;
+
+    --silver: #171717;
+    --silver-soft: #4b5563;
+    --silver-faint: #9ca3af;
+    --silver-ghost: #c9cdd4;
+
+    --edge: rgba(0, 0, 0, 0.10);
+    --edge-soft: rgba(0, 0, 0, 0.05);
+    --edge-bright: rgba(0, 0, 0, 0.18);
+
+    --grain: rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* ─── Tailwind Theme Bridge ─── */
+
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-darkroom: var(--darkroom);
+  --color-film: var(--film);
+  --color-print: var(--print);
+  --color-silver: var(--silver);
+  --color-silver-soft: var(--silver-soft);
+  --color-silver-faint: var(--silver-faint);
+  --color-silver-ghost: var(--silver-ghost);
+  --color-safelight: var(--safelight);
+  --color-safelight-glow: var(--safelight-glow);
+  --color-background: var(--darkroom);
+  --color-foreground: var(--silver);
   --font-sans: var(--font-body);
   --font-mono: var(--font-body);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f1720;
-    --foreground: #e6eef8;
-    --dot: rgba(255,255,255,0.04);
-    --card-bg: #111827;
-    --card-foreground: #e6eef8;
-  }
+/* ─── Base ─── */
+
+html {
+  scrollbar-gutter: stable;
 }
 
 body {
   font-family: var(--font-body), system-ui, sans-serif;
-  background:
-    radial-gradient(circle, var(--dot) 1.5px, transparent 1.5px),
-    linear-gradient(135deg, #1A1A1A 0%, #2C2C2C 50%, #1A1A1A 100%);
-  background-size: 10px 10px, 100% 100%;
-  background-repeat: repeat, no-repeat;
-  background-position: 0 0, center;
-  background-attachment: scroll, fixed;
-  color: var(--foreground);
+  background-color: var(--darkroom);
+  background-image: radial-gradient(circle, var(--grain) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+  color: var(--silver);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display), serif;
-}
-
-.card {
-  color: var(--card-foreground);
-}
-
-.card * {
-  color: var(--card-foreground);
 }
 
 .copyright-badge {
@@ -62,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: 10px;
   right: 10px;
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--silver-ghost);
   z-index: 1000;
   pointer-events: none;
 }

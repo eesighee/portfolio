@@ -22,17 +22,7 @@ export default function HomeClient({
   };
 
   return (
-    <div
-      className="min-h-screen text-[var(--text-light)]"
-      style={{
-        backgroundImage: `
-          radial-gradient(circle, rgba(255,255,255,0.08) 1.5px, transparent 1.5px),
-          linear-gradient(135deg, #121212 0%, #3A3A3A 50%, #121212 100%)
-        `,
-        backgroundSize: '12px 12px, 100% 100%',
-        backgroundAttachment: 'scroll, fixed'
-      }}
-    >
+    <div className="min-h-screen">
       {/* Full-Screen Hero */}
       <HeroSection />
 
@@ -41,14 +31,14 @@ export default function HomeClient({
         <motion.h2
           {...animationProps}
           id="gallery"
-          className="text-4xl font-bold text-center mb-12 border-b-2 border-[var(--gold)]/30 pb-4"
+          className="text-4xl font-bold text-center mb-12 border-b border-safelight/20 pb-4"
         >
           Moments In Time
         </motion.h2>
 
         <Gallery coopImages={coopImages} vetteImages={vetteImages} myselfImages={myselfImages} />
 
-        <div id="about" className="mt-24 pt-8 border-t border-[var(--secondary-dark)]">
+        <div id="about" className="mt-24 pt-8 border-t border-[var(--edge)]">
           <motion.h2
             {...animationProps}
             className="text-4xl font-bold text-center mb-8"
@@ -58,10 +48,10 @@ export default function HomeClient({
           <motion.section
             {...animationProps}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="card max-w-3xl mx-auto border border-[var(--gold)]/20 p-8 bg-[var(--secondary-dark)] rounded-sm"
+            className="max-w-3xl mx-auto border border-[var(--edge)] p-8 bg-film rounded-sm"
           >
             <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-              <div className="relative w-56 h-56 flex-shrink-0 rounded-full overflow-hidden border-4 border-[var(--gold)]/30">
+              <div className="relative w-56 h-56 flex-shrink-0 rounded-full overflow-hidden border-4 border-safelight/20">
                 <Image
                   src="/photos/profile/me.JPG"
                   alt="Isai Alegria"
@@ -71,18 +61,18 @@ export default function HomeClient({
                 />
               </div>
               <div className="flex flex-col items-center md:items-start text-center md:text-left">
-                <h3 className="text-3xl font-bold text-[var(--text-light)] self-center">Isai Alegria</h3>
-                <p className="text-[var(--gold)] font-medium mt-1 mb-4 self-center">Software Engineer & Photographer</p>
-                <p className="text-[var(--text-light)] leading-relaxed text-lg">
+                <h3 className="text-3xl font-bold self-center">Isai Alegria</h3>
+                <p className="text-safelight font-medium mt-1 mb-4 self-center">Software Engineer & Photographer</p>
+                <p className="text-silver-soft leading-relaxed text-lg">
                   Welcome to my portfolio — a space where I share some of my favorite moments through the lens.
                   Feel free to explore the gallery, and don't hesitate to reach out with any questions, ideas, or collaboration opportunities.
                 </p>
-                <div className="w-16 h-px bg-[var(--gold)]/40 my-6" />
+                <div className="w-16 h-px bg-safelight/40 my-6" />
                 <div className="flex flex-col sm:flex-row gap-4 items-center">
                   <a
                     href="mailto:eesighee@gmail.com"
                     aria-label="Email eesighee@gmail.com"
-                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto rounded-sm font-semibold transition-all duration-200 border border-[var(--edge)] hover:border-safelight hover:text-safelight focus:outline-none focus:ring-2 focus:ring-safelight"
                   >
                     Email
                   </a>
@@ -91,7 +81,7 @@ export default function HomeClient({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram (opens in new window)"
-                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto rounded-sm font-semibold transition-all duration-200 border border-[var(--edge)] hover:border-safelight hover:text-safelight focus:outline-none focus:ring-2 focus:ring-safelight"
                   >
                     Instagram
                   </a>
@@ -100,7 +90,7 @@ export default function HomeClient({
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Twitter / X (opens in new window)"
-                    className="inline-block px-8 py-3 w-48 sm:w-auto text-[var(--text-light)] rounded-sm font-semibold transition-all duration-200 border border-[var(--accent)]/40 hover:border-[var(--gold)] hover:text-[var(--gold)] focus:outline-none focus:ring-2 focus:ring-[var(--gold)]"
+                    className="inline-block px-8 py-3 w-48 sm:w-auto rounded-sm font-semibold transition-all duration-200 border border-[var(--edge)] hover:border-safelight hover:text-safelight focus:outline-none focus:ring-2 focus:ring-safelight"
                   >
                     Twitter / X
                   </a>

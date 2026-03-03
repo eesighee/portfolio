@@ -24,12 +24,12 @@ export default function Navbar() {
       initial={{ y: 0 }}
       animate={{ y: visible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[var(--primary-dark)]/70 border-b border-white/10"
+      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-darkroom/80 border-b border-[var(--edge)]"
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-bold text-[var(--text-light)] tracking-wide"
+          className="text-xl font-bold text-silver tracking-wide"
           style={{ fontFamily: "var(--font-display), serif" }}
         >
           Fotos de Alegría
@@ -38,19 +38,19 @@ export default function Navbar() {
         <div className="flex items-center gap-6">
           <Link
             href="/#gallery"
-            className="text-sm text-[var(--accent)] hover:text-[var(--gold)] transition-colors duration-200"
+            className="text-sm text-silver-soft hover:text-safelight transition-colors duration-200"
           >
             Gallery
           </Link>
           <Link
             href="/#about"
-            className="text-sm text-[var(--accent)] hover:text-[var(--gold)] transition-colors duration-200"
+            className="text-sm text-silver-soft hover:text-safelight transition-colors duration-200"
           >
             About
           </Link>
           <Link
             href="/blog"
-            className="text-sm text-[var(--accent)] hover:text-[var(--gold)] transition-colors duration-200"
+            className="text-sm text-silver-soft hover:text-safelight transition-colors duration-200"
           >
             Blog
           </Link>

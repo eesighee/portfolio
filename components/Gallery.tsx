@@ -76,40 +76,40 @@ export default function Gallery({
 
   const sectionHeader = (title: string) => (
     <div className="py-6 mb-2">
-      <h3 className="text-2xl font-semibold text-[var(--text-light)] tracking-wide text-center">
+      <h3 className="text-2xl font-semibold text-silver tracking-wide text-center">
         {title}
       </h3>
-      <div className="mt-2 mx-auto w-16 h-px bg-[var(--gold)]/40" />
+      <div className="mt-2 mx-auto w-16 h-px bg-safelight/40" />
     </div>
   );
 
   return (
-    <section className="card w-full border border-[var(--gold)]/20 p-8 bg-[var(--secondary-dark)] rounded-sm space-y-4">
+    <section className="w-full space-y-12">
       {coopImages.length > 0 && (
-        <>
+        <div>
           {sectionHeader("Coop")}
           <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
             {coopImages.map((src, i) => renderImage(src, i))}
           </div>
-        </>
+        </div>
       )}
 
       {vetteImages.length > 0 && (
-        <>
+        <div>
           {sectionHeader("Auto")}
           <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
             {vetteImages.map((src, i) => renderImage(src, i))}
           </div>
-        </>
+        </div>
       )}
 
       {myselfImages.length > 0 && (
-        <>
+        <div>
           {sectionHeader("Self-Portraits")}
           <div className="columns-1 sm:columns-2 md:columns-3 gap-4">
             {myselfImages.map((src, i) => renderImage(src, i))}
           </div>
-        </>
+        </div>
       )}
     </section>
   );
