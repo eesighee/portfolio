@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { posts } from "../../../content/posts";
 import { fetchShareLinkAssets, resolvePhotos } from "../../../lib/lumavue";
@@ -70,13 +69,12 @@ export default async function BlogPostPage({
           {photos.map((photo, i) => (
             <figure key={i} className="border border-[var(--edge)] rounded-sm p-3 bg-film">
               <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px]">
-                <Image
-                  src={photo.src}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/api/image/${post.shareLinkId}?asset=${i}`}
                   alt={photo.alt}
-                  fill
-                  style={{ objectFit: "contain" }}
-                  sizes="(max-width: 1024px) 100vw, 896px"
-                  className="rounded-sm"
+                  loading={i === 0 ? "eager" : "lazy"}
+                  className="rounded-sm w-full h-full object-contain"
                 />
               </div>
               {photo.caption && (

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { posts } from "../../content/posts";
-import { fetchShareLinkAssets, resolvePhotos } from "../../lib/lumavue";
 
 export const metadata: Metadata = {
   title: "Blog — Fotos de Alegria",
@@ -14,17 +12,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function BlogPage() {
+export default function BlogPage() {
   const sorted = [...posts].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
-
-  const thumbnails = await Promise.all(
-    sorted.map(async (post) => {
-      const assets = await fetchShareLinkAssets(post.shareLinkId);
-      const photos = resolvePhotos(assets, post.captions);
-      return photos[0]?.thumbnailUrl;
-    }),
   );
 
   return (
@@ -40,23 +30,21 @@ export default async function BlogPage() {
           </p>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {sorted.map((post, i) => (
+            {sorted.map((post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
                 className="group border border-[var(--edge)] bg-film rounded-sm overflow-hidden hover:border-safelight/40 transition duration-300 focus:outline-none focus:ring-2 focus:ring-safelight"
               >
-                {thumbnails[i] && (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={thumbnails[i]}
-                      alt={post.title}
-                      fill
-                      style={{ objectFit: "cover" }}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  </div>
-                )}
+                <div className="relative w-full h-48">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/api/image/${post.shareLinkId}?asset=0&thumb=1`}
+                    alt={post.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <div className="p-4">
                   <time className="text-xs text-silver-faint">
                     {new Date(post.date).toLocaleDateString("en-US", {
