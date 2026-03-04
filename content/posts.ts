@@ -29,4 +29,36 @@ export const posts: BlogPost[] = [
     description: "Wrapped Corvette shines even at night.",
     shareLinkId: "d2874b19-071e-43b1-bc80-3ad094892f9f",
   },
+  {
+    slug: "mclaren",
+    title: "P1 HDK McLaren",
+    date: "2026-03-04",
+    description: "Behold, the P1 HDK McLaren. The hybrid holy trinity, evolved.",
+    shareLinkId: "f46b621a-e900-4b65-8bf2-0d9b15155ba5",
+  },
+  {
+    slug: "no-kings",
+    title: "No Kings Protest",
+    date: "2026-03-04",
+    description: "The power rests with the people, not a throne.",
+    shareLinkId: "d5eba3fb-7874-442d-8ef9-8e99a3e2b074",
+  },
+  {
+    slug: "cooper",
+    title: "Cooper",
+    date: "2026-03-04",
+    description: "Man's best friend.",
+    shareLinkId: "11c534d1-2bee-419f-95e4-f96def1720ec",
+  }
 ];
+
+
+/*
+
+mclaren - f46b621a-e900-4b65-8bf2-0d9b15155ba5
+
+no kings - d5eba3fb-7874-442d-8ef9-8e99a3e2b074
+
+coop - 11c534d1-2bee-419f-95e4-f96def1720ec
+
+*/
