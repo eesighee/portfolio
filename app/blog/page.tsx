@@ -39,7 +39,7 @@ export default function BlogPage() {
                 <div className="relative w-full h-48">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src={`/api/image/${post.shareLinkId}?asset=0&thumb=1`}
+                    src={`/api/image/${post.shareLinkId}?${post.cover ? `filename=${encodeURIComponent(post.cover)}` : "asset=0"}&thumb=1`}
                     alt={post.title}
                     loading="lazy"
                     className="w-full h-full object-cover"
