@@ -30,7 +30,7 @@ export async function fetchShareLinkAssets(
   }
 
   const res = await fetch(`${API_BASE}/share/${linkId}/assets`, {
-    next: { revalidate: 3600 },
+    cache: "no-store",
   });
 
   if (!res.ok) {
